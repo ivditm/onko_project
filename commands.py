@@ -292,7 +292,7 @@ table_57_insert = '''INSERT INTO TreatmentData (
 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
         ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'''
 view = '''
-CREATE VIEW data AS
+CREATE VIEW IF NOT EXISTS data AS
 SELECT *
 FROM population_data
 LEFT JOIN mort_cancer ON population_data.region = mort_cancer.region
